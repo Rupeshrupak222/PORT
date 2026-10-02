@@ -18,7 +18,7 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
 
   useEffect(() => {
     setMounted(true);
-    const savedTheme = localStorage.getItem("rk_portfolio_theme") as Theme | null;
+    const savedTheme = localStorage.getItem("rupesh_portfolio_theme") as Theme | null;
     if (savedTheme === "light" || savedTheme === "dark") {
       setThemeState(savedTheme);
       applyTheme(savedTheme);
@@ -46,7 +46,7 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
 
   const setTheme = (newTheme: Theme) => {
     setThemeState(newTheme);
-    localStorage.setItem("rk_portfolio_theme", newTheme);
+    localStorage.setItem("rupesh_portfolio_theme", newTheme);
     applyTheme(newTheme);
   };
 
