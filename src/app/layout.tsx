@@ -3,6 +3,7 @@ import "./globals.css";
 import { CustomCursor } from "@/components/ui/CustomCursor";
 import { SmoothScrollProvider } from "@/components/providers/SmoothScroll";
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
+import { SecurityShield } from "@/components/ui/SecurityShield";
 
 export const metadata: Metadata = {
   title: "RUPESH KUMAR RUPAK — Full Stack Engineer & Creative WebGL Architect",
@@ -49,6 +50,9 @@ export default function RootLayout({
       >
         <ThemeProvider>
           <SmoothScrollProvider>
+            {/* Security Shield — DevTools detection, right-click block, console warning */}
+            <SecurityShield />
+
             {/* Subtle Film Grain Noise Texture */}
             <div className="noise-overlay" />
 
